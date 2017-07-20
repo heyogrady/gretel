@@ -24,7 +24,7 @@ module Gretel
       bootstrap: { container_tag: :ol, fragment_tag: :li, class: "breadcrumb", current_class: "active" },
       bootstrap4: { container_tag: :ol, fragment_tag: :li, class: "breadcrumb", fragment_class: "breadcrumb-item", current_class: "active" },
       foundation5: { container_tag: :ul, fragment_tag: :li, class: "breadcrumbs", current_class: "current" },
-      semantic_ui: { container_tag: :div, separator: "<i class='right chevron icon divider'></i>", fragment_tag: :div, class: "breadcrumb", fragment_class: "section", current_class: "active" }
+      semantic_ui: { container_tag: :div, separator: "<i class='right chevron icon divider'></i>", class: "breadcrumb", fragment_class: "section", current_class: "active" }
     }
 
     def initialize(context, breadcrumb_key, *breadcrumb_args)

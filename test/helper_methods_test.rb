@@ -378,7 +378,7 @@ class HelperMethodsTest < ActionView::TestCase
 
   test "semantic_ui style" do
     breadcrumb :basic
-    assert_dom_equal %{<div class="breadcrumb"><a class="section" href="/">Home</a><i class='right chevron icon divider'></i><span class="section active">About</span></div>},
+    assert_dom_equal %{<div class="ui large breadcrumb"><a class="section" href="/">Home</a><i class='right chevron icon divider'></i><span class="section active">About</span></div>},
                  breadcrumbs(style: :semantic_ui).to_s
   end
 

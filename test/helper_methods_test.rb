@@ -364,10 +364,22 @@ class HelperMethodsTest < ActionView::TestCase
                  breadcrumbs(style: :bootstrap).to_s
   end
 
+  test "bootstrap4 style" do
+    breadcrumb :basic
+    assert_dom_equal %{<ol class="breadcrumb"><li class="breadcrumb-item"><a href="/">Home</a></li><li class="breadcrumb-item active">About</li></ol>},
+                 breadcrumbs(style: :bootstrap4).to_s
+  end
+
   test "foundation5 style" do
     breadcrumb :basic
     assert_dom_equal %{<ul class="breadcrumbs"><li><a href="/">Home</a></li><li class="current">About</li></ul>},
 	         breadcrumbs(style: :foundation5).to_s
+  end
+
+  test "semantic_ui style" do
+    breadcrumb :basic
+    assert_dom_equal %{<div class="breadcrumb"><div class="section"><a href="/">Home</a></div><i class="right chevron icon divider"></i><div class="section active">About</div></div>},
+                 breadcrumbs(style: :semantic_ui).to_s
   end
 
   test "custom container and fragment tags" do
